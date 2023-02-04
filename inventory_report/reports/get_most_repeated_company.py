@@ -1,5 +1,5 @@
 def get_most_repeated_company(product_list: list):
-    nomes_das_empresas = get_company_names(product_list)
+    nomes_das_empresas = [e["nome_da_empresa"] for e in product_list]
     empresa_que_mais_repete = {"nome": "none", "qtd": 0}
     lista_de_empresas = \
         calculate_quantity_of_products_by_company(nomes_das_empresas)
@@ -7,13 +7,6 @@ def get_most_repeated_company(product_list: list):
         if empresa["qtd"] > empresa_que_mais_repete["qtd"]:
             empresa_que_mais_repete = empresa
     return empresa_que_mais_repete["nome"]
-
-
-def get_company_names(product_list: list):
-    nomes_de_todas_empresas = list()
-    for produto in product_list:
-        nomes_de_todas_empresas.append(produto["nome_da_empresa"])
-    return nomes_de_todas_empresas
 
 
 def calculate_quantity_of_products_by_company(nomes_das_empresas):

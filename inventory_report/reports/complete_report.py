@@ -12,7 +12,6 @@ class CompleteReport(SimpleReport):
         first_string = super().generate(product_list)
         first_string += "\n"
         nomes_das_empresas = [e["nome_da_empresa"] for e in product_list]
-        # print(product_list[0]['nome_da_empresa'])
         quantidade_por_empresa =\
             calculate_quantity_of_products_by_company(nomes_das_empresas)
         empresas_qtd_string = [
@@ -20,8 +19,6 @@ class CompleteReport(SimpleReport):
             for empresa in quantidade_por_empresa
         ]
         produtos_estocados_por_empresa = "Produtos estocados por empresa:\n"
-        # print(first_string)
-        # print(empresas_qtd_string)
         final_string =\
             first_string + produtos_estocados_por_empresa
         print(final_string)
