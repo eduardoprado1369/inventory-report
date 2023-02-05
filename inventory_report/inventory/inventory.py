@@ -19,7 +19,6 @@ class Inventory:
             with open(file_path) as file:
                 xmlfile = file.read()
                 product_list = xmltodict.parse(xmlfile)["dataset"]["record"]
-                print(product_list)
         if type == "simples":
             report = SimpleReport.generate(product_list)
             return report
