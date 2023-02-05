@@ -24,5 +24,4 @@ class CompleteReport(SimpleReport):
             first_string + produtos_estocados_por_empresa
         for empresa in empresas_qtd_string:
             final_string += empresa
-        print(final_string)
         return final_string
