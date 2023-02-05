@@ -6,8 +6,7 @@ from inventory_report.reports.get_most_repeated_company\
 
 class SimpleReport:
     @staticmethod
-    def generate(product_list):
-        # print(type(product_list[0]["nome_da_empresa"]))
+    def generate(product_list: list):
         data_mais_antiga = calculate_oldest_date(product_list,
                                                  "data_de_fabricacao")
         data_mais_recente = calculate_oldest_date(product_list,
