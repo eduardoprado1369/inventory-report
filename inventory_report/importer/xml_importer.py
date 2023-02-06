@@ -1,5 +1,5 @@
 from inventory_report.reports.simple_report import SimpleReport
-from inventory_report.reports.complete_report import CompleteReport
+# from inventory_report.reports.complete_report import CompleteReport
 from inventory_report.importer.importer import Importer
 import xmltodict
 
@@ -14,4 +14,5 @@ class XmlImporter(Importer):
         if type == "simples":
             report = SimpleReport.generate(product_list)
             return report
-        return CompleteReport.generate(product_list)
+        # return CompleteReport.generate(product_list)
+        return product_list
